@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #small-box{
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+            position: relative;
+        }
+        #float{
+            width: 200px;
+            height: 200px;
+            background: #cccccc;
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        #small-pic{
+            left: 0;
+            top: 0;
+            position: absolute;
+        }
+        #big-box{
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            top: 0;
+            left: 405px;
+            position: absolute;
+            display: none;
+        }
+        #big-pic{
+            top: 0;
+            left: 0;
+            position: absolute;
+
+        }
+    </style>
+</head>
+<body>
+<div id="small-box">
+    <img id="small-pic" src="1.jpg" alt=""/>
+    <div id="float"></div>
+</div>
+<div id="big-box">
+    <img src="2.jpg" alt="" id="big-pic"/>
+</div>
+<script>
+    var oSmallBox = document.getElementById('small-box');
+    var oSmallPic = document.getElementById('small-pic');
+    var oBigBox = document.getElementById('big-box');
+    var oBigPic = document.getElementById('big-pic');
+    var oFloat = document.getElementById('float');
+    oSmallBox.onmouseover = function(){
+        oFloat.style.display = 'block';
+        oBigBox.style.display = 'block';
+    }
+    oSmallBox.onmousemove = function(e){
+        e = e ||window.event;
+        iLeft = e.clientX - oFloat.offsetWidth/2;
+        iTop = e.clientY - oFloat.offsetHeight/2;
+        if(iLeft <= 0){
+            iLeft = 0;
+        }
+        if(iLeft >= oSmallBox.offsetWidth - oFloat.offsetWidth){
+            iLeft = oSmallBox.offsetWidth - oFloat.offsetWidth;
+        }
+        if(iTop <= 0){
+            iTop = 0;
+        }
+        if(iTop >= oSmallBox.offsetHeight - oFloat.offsetHeight){
+            iTop = oSmallBox.offsetHeight - oFloat.offsetHeight;
+        }
+        oFloat.style.left = iLeft + 'px';
+        oFloat.style.top = iTop + 'px';
+        var fScaleX = iLeft/(oSmallBox.offsetWidth - oFloat.offsetWidth);
+        var fScaleY = iTop/(oSmallBox.offsetHeight - oFloat.offsetHeight);
+        oBigPic.style.left = -fScaleX * (oBigPic.offsetWidth - oBigBox.offsetWidth) + 'px';
+        oBigPic.style.top = -fScaleY * (oBigPic.offsetHeight - oBigBox.offsetHeight) + 'px';
+    }
+    oSmallBox.onmouseout = function(){
+        oFloat.style.display = 'none';
+        oBigBox.style.display = 'none';
+    }
+</script>
+</body>
+</html>
