@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #container{
+            width: 420px;
+            margin: 150px;
+        }
+        li{
+            float: left;
+            width: 80px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            background: #eeeeee;
+            border: 1px solid #008CD7;
+            color: #333333;
+            margin-right: 5px;
+        }
+        ul{
+            overflow: hidden;
+        }
+        li.selected{
+            background: #003399;
+            color: #000;
+        }
+        #content{
+            background: #cccccc;
+            height: 200px;
+        }
+        #content div{
+            height: 200px;
+            display: none;
+        }
+        #content div.selected{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul>
+            <li class="selected">阿玉</li>
+            <li>也哥</li>
+            <li>洋哥</li>
+        </ul>
+        <div id="content">
+            <div class="selected">是我大儿子</div>
+            <div>也是我大儿子</div>
+            <div>还是我大儿子</div>
+        </div>
+    </div>
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+        $('li').on('click',function(){
+            $(this).addClass('selected').siblings().removeClass('selected');
+            $index = $(this).index();
+            $('#content div').eq($index).addClass('selected').siblings().removeClass('selected');
+        })
+
+    </script>
+</body>
+</html>

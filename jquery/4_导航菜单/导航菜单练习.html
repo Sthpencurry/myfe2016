@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .main{
+            float: left;
+            width: 150px;
+            background: #cccccc;
+        }
+        .main-link{
+            display: block;
+            height:30px;
+            line-height: 30px;
+            text-indent: 20px;
+            color:#000;
+            background: url("images/down.gif") no-repeat 5px;
+        }
+        .main li a{
+            display: block;
+            height:30px;
+            line-height: 30px;
+            text-indent: 20px;
+            color:#fff;
+            background: #888888;
+        }
+        .main ul{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul>
+            <li class="main">
+                <a href="#" class="main-link">阿玉1</a>
+                <ul>
+                    <li><a href="#">过年胖十斤</a></li>
+                    <li><a href="#">过年胖二十斤</a></li>
+                    <li><a href="#">过年胖三十斤</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li class="main">
+                <a href="#" class="main-link">阿玉2</a>
+                <ul>
+                    <li><a href="#">是我大儿子</a></li>
+                    <li><a href="#">是我好儿子</a></li>
+                    <li><a href="#">是我老儿子</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li class="main">
+                <a href="#" class="main-link">阿玉3</a>
+                <ul>
+                    <li><a href="#">肚子有三层</a></li>
+                    <li><a href="#">肚子有四层</a></li>
+                    <li><a href="#">肚子有五层</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="../../jquery-1.12.4.js"></script>
+    <script>
+        $('.main').hover(function(){
+            $(this).find('.main-link').css('background-image','url("images/up.gif")').end().children('ul').stop().slideDown();
+        },function(){
+            $(this).find('.main-link').css('background-image','url("images/down.gif")').end().children('ul').stop().slideUp();
+        })
+    </script>
+</body>
+</html>

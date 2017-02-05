@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <form action="">
+        你的爱好：<input type="checkbox" id="CheckedAll"/>全选/全不选<br/>
+        <input type="checkbox" name="items" value=""/>足球
+        <input type="checkbox" name="items"/>篮球
+        <input type="checkbox" name="items"/>羽毛球
+        <input type="checkbox" name="items"/>乒乓球<br/>
+        <input type="button" id="send" value="提交"/>
+    </form>
+    <script src="../../jquery-1.12.4.js"></script>
+    <script>
+        $('#CheckedAll').on('click',function(){
+            $('[name="items"]').prop('checked',$('#CheckedAll').prop('checked'));
+
+        })
+        $('[name="items"]').on('click',function(){
+            var isCheck = $('#CheckedAll').prop('checked');
+            if(isCheck){
+                $('#CheckedAll').prop('checked',false);
+            }
+            if($('[name="items"]:checked').size() == $('[name="items"]').size()){
+                $('#CheckedAll').prop('checked',true);
+            }
+        })
+    </script>
+</body>
+</html>
