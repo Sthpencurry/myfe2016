@@ -1,0 +1,124 @@
+/* banner开始 */
+#banner{
+    height: 460px;
+    background: url(../../img/bg.png) repeat-x;
+}
+#banner .wrapper{
+    position: relative;
+}
+#banner .arrow{
+    width: 29px;
+    height: 50px;
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+}
+#banner .prev{
+    background-position: 0 -14px;
+    left: 0;
+}
+#banner .next{
+    background-position: -29px -14px;
+    right: 0;
+}
+#imgs{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 520px;
+    height: 280px;
+    margin-top: -140px;
+    margin-left: -280px;
+}
+/* banner结束 */
+/* news开始 */
+#news{
+    height: 492px;
+}
+#news .wrapper{
+    position: relative;
+}
+#news ul{
+    position: absolute;
+    margin-top: 89px;
+    width: 286px;
+    height: 492px;
+}
+#news li{
+    position: absolute;
+}
+#news .img{
+    width: 286px;
+    height: 90px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 15px;
+    margin-top: 180px;
+}
+#news img{
+    position: absolute;
+    left:65px;
+}
+#news .ul1{
+    left: 24px;
+}
+#news .ul2 {
+    right: 358px;
+}
+#news .ul3{
+    right: 24px;
+}
+#news .li{
+    margin-top: 305px;
+    left:105px;
+}
+#news a{
+    color: #00aeff;
+}
+/* news结束 */
+/* works开始 */
+#works{
+    height: 500px;
+    background: #e2e7ed;
+}
+.wrapper{
+    position: relative;
+}
+#works img{
+    position: absolute;
+}
+#works .work{
+    margin-top: 30px;
+}
+#works .img1{
+    margin-top: 70px;
+}
+#works .img2{
+    margin-top: 70px;
+    left:250px;
+}
+#works .img3{
+    margin-top: 70px;
+    right:250px;
+}
+#works .img4{
+    margin-top: 70px;
+    right:0px;
+}
+#works .img5{
+     margin-top: 270px;
+}
+#works .img6{
+    margin-top: 270px;
+    left:250px;
+}
+#works .img7{
+    margin-top: 270px;
+    right:251px;
+}
+#works .img8{
+    margin-top: 270px;
+    right:0px;
+}
