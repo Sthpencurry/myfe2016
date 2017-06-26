@@ -1,0 +1,709 @@
+*{
+    margin:0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+html{
+    font-family: arial, AvenirRoman, HelveticaNeue-Light, Helvetica Neue,
+    Hiragino Sans GB, 冬青黑体, Microsoft YaHei New, Microsoft Yahei, 微软雅黑,
+    宋体, SimSun, STXihei, 华文细黑, sans-serif;
+}
+/*@font-face {
+    font-family: 'turn-arrow';
+    src: url('../font/icons/turn-arrow.eot'); /!* IE9+ *!/
+    src: url('../font/icons/turn-arrow.eot?#iefix') format('embedded-opentype'), /!* IE6-IE8 *!/
+    url('../font/icons/turn-arrow.woff') format('woff'), /!* chrome、firefox *!/
+    url('../font/icons/turn-arrow.ttf') format('truetype'), /!* chrome、firefox、opera、Safari, Android, iOS 4.2+*!/
+    url('../font/icons/turn-arrow.svg#fontname') format('svg'); /!* iOS 4.1- *!/
+}*/
+/*nav??ʼ*/
+#nav{
+    height: 100px;
+    background: #000;
+    left: 0;
+    top: 0;
+    right: 0;
+    position: fixed;
+    z-index: 999;
+}
+#header{
+    display: -webkit-box;
+}
+#menu ,#word{
+    -webkit-box-flex: 1;
+}
+#menu ul{
+    display: -webkit-box;
+}
+#menu ul li{
+    -webkit-box-flex: 1;
+}
+#word{
+    margin-top: 40px;
+}
+#word a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+#menu {
+     margin-right:0;
+     margin-top: 43px;
+ }
+#menu li a{
+    float: right;
+    font-size: 14px;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+}
+#menu li a:hover{
+    color: #44b272;
+    transition: all 0.2s ease-in-out;
+}
+#menu .selected{
+     color: #44b272;
+}
+#drop1 .selected{
+    color: #44b272;
+    top: 10px;
+}
+#drop1{
+    position: relative;
+    top: 37px;
+    height: 240px;
+    background: #000;
+    display: none;
+}
+.a2{
+    top: 50px;
+}
+.a3{
+    top: 90px;
+}
+.a4{
+    top: 130px;
+}
+.a5{
+    top: 170px;
+}
+#drop1 li a{
+    position: absolute;
+    margin: 20px;
+    font-size: 14px;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+}
+#drop{
+    position: relative;
+    display: none;
+    cursor: pointer;
+}
+#drop .i2{
+    top: 35px;
+}
+#drop .i3{
+    top: 45px;
+}
+.icon-bar{
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    right: 20px;
+    margin: 8px;
+    top: 40px;
+    background: #fff;
+}
+#header{
+    padding:0 100px;
+}
+/*nav???*/
+#bg{
+    position: relative;
+    margin-top:100px;
+    padding-top:56%;
+    height: 0;
+    background: url(../img/bg2.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+#container{
+    position: absolute;
+    top: 50%;
+    margin-top: -155px;
+    width: 100%;
+}
+.name{
+    font-size: 100px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+.slogan{
+    color: #fff;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+}
+/*about??ʼ*/
+.position{
+    background: #f0f0f0;
+}
+#about{
+    width: 1100px;
+    position: relative;
+    margin:0 auto;
+    padding-top: 150px;
+    height: 600px;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+#about img{
+    width: 360px;
+    position: absolute;
+}
+#about h3{
+    position: absolute;
+    left: 380px;
+    font-size: 32px;
+    font-weight: 700;
+    padding:20px 0 20px 20px;
+}
+#message{
+    display: table;
+}
+
+#message p{
+    position: absolute;
+    left: 380px;
+    top: 217px;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 38px;
+}
+/*about???*/
+/*service??ʼ*/
+#art .essay{
+    width: 305px;
+    height: 75px;
+    display: table;
+}
+.essay p{
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 25px;
+    padding-left: 75px;
+}
+.title h3{
+    padding-bottom: 15px;
+    font-size: 20px;
+    padding-left: 75px;
+}
+.technology{
+    float: left;
+    margin-left: 60px;
+    margin-top: 60px;
+}
+#art{
+    width: 100%;
+}
+#service{
+    width: 1150px;
+    margin:0 auto;
+    height: 600px;
+    padding-top: 130px;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+#ido{
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+#ido h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+#work{
+    height:380px;
+    background: url(../img/quotes-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative
+}
+#work .mask{
+    background: #000;
+    opacity: 0.7;
+    height: 380px;
+}
+#text{
+    width: 940px;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 108px;
+}
+#text .btn{
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 150px;
+    top: 116px;
+    position: absolute;
+    border-radius: 48px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    height: 48px;
+    letter-spacing: 0.2em;
+    line-height: 48px;
+    overflow: hidden;
+    padding: 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #44b272;
+    color: #000;
+}
+#text h3{
+    font-size: 42px;
+    color: #fff;
+    margin-bottom: 25px;
+    text-align: center;
+}
+#text p{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 25px;
+}
+/*service???*/
+/*work??ʼ*/
+#tproject h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+#recent{
+    height: 900px;
+    padding-top: 130px;
+    width: 1120px;
+    margin:0 auto;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+#tproject{
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+#cproject{
+    position: relative;
+}
+#cproject a{
+    position: absolute;
+}
+#cproject .image1{
+    top: 50px;
+}
+#cproject .image2{
+    left: 380px;
+    top: 50px;
+}
+#cproject .image3{
+    right: 0;
+    top: 50px;
+}
+#cproject .image4{
+    top: 440px;
+}
+#cproject .image5{
+    top: 440px;
+    left: 380px;
+}
+#cproject .image6{
+    top: 440px;
+    right: 0;
+}
+#cproject img{
+    width: 360px;
+    border-radius: 10px;
+}
+.shadow{
+    box-shadow: 0 10px 10px 5px #ccc;
+
+}
+/*work???*/
+/*contact??ʼ*/
+#contact{
+    margin: 0 auto;
+    width: 1100px;
+    height: 800px;
+    position: relative;
+    padding-top: 130px;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+#section{
+    width: 100%;
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+#section h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.controls{
+    width: 700px;
+}
+#controls{
+    position: absolute;
+    left: 0;
+}
+.form-control {
+    padding: 20px;
+    height: auto;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    margin: 10px 0;
+}
+.help-block {
+    opacity: 0;
+    margin-bottom: 10px;
+    color: #a94442;
+}
+.phone{
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+}
+.phone i{
+    margin: 0 15px;
+}
+.contact-padding{
+    padding: 20px;
+    margin-bottom: 38px;
+    width: 305px;
+}
+.full-adress{
+    margin-top: 5px;
+    position: absolute;
+    right: 0;
+}
+#div .btn{
+    left: 0;
+    width: 250px;
+    bottom: 100px;
+    position: absolute;
+    border-radius: 30px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 600;
+    height: 60px;
+    letter-spacing: 1px;
+    line-height: 50px;
+    overflow: hidden;
+    padding: 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #44b272;
+    color: #000;
+    box-shadow: 0 7px 16px 0 rgba(50, 50, 50, 0.2);
+}
+#messages{
+    height: 197px;
+}
+#a{
+    height: 150px;
+    background: #f0f0f0;
+    text-align: center;
+    padding-top:150px;
+}
+#b{
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+@media(max-width: 1150px){
+    #contact{
+        width: 940px;
+    }
+    .controls{
+        width: 500px;
+    }
+    #art .essay{
+        width: 410px;
+    }
+    .technology{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    #container{
+        margin-top: -115px;
+    }
+    #ido{
+        margin-left: 30px;
+    }
+    #cproject img{
+        width: 300px;
+    }
+    #cproject .image2,#cproject .image5{
+        left: 320px;
+    }
+    #cproject .image4,#cproject .image5,#cproject .image6{
+        top: 380px;
+    }
+    #service{
+        width: 940px;
+        height: 750px;
+    }
+    #recent{
+        width: 940px;
+        height: 800px;
+    }
+    #about{
+        width: 940px;
+    }
+}
+@media(max-width: 959px){
+    .name{
+        font-size: 85px;
+    }
+    .slogan{
+        font-size: 25px;
+    }
+    #about{
+        width: 748px;
+    }
+    #message p{
+        line-height: 32px;
+    }
+    #contact{
+        width: 748px;
+    }
+    #cproject img{
+        width: 236px;
+    }
+    #cproject .image4,#cproject .image5,#cproject .image6{
+         top: 316px;
+     }
+    #cproject .image2,#cproject .image5{
+        left: 256px;
+    }
+    #art .essay{
+        width: 314px;
+    }
+    #service{
+        width: 748px;
+        height: 850px;
+    }
+    #recent{
+        width: 748px;
+        height: 650px;
+    }
+    .controls{
+        width: 350px;
+    }
+    #text {
+         width: 748px;
+     }
+}
+@media(max-width: 767px){
+    #contact{
+        width: 460px;
+        height: 1100px;
+    }
+    .controls{
+        width: 420px;
+    }
+    #service{
+        width: 460px;
+        height: 1300px;
+    }
+    #recent{
+        width: 460px;
+        height: 3000px;
+    }
+    #text {
+        width: 460px;
+    }
+    #menu{
+        display: none;
+    }
+    #header{
+        padding:0 20px;
+    }
+    #drop{
+        display: block;
+    }
+    .name{
+        font-size: 45px;
+    }
+    .slogan{
+        font-size: 15px;
+    }
+    #container{
+        margin-top: -55px;
+    }
+    #about{
+        width: 460px;
+        height: 1170px;
+    }
+    #about img{
+        width: 460px;
+    }
+    #about h3{
+        top: 765px;
+        left: 0;
+        font-size: 32px;
+        font-weight: 700;
+        padding:20px 0 20px 20px;
+    }
+    #message p{
+        top: 850px;
+        left: 0;
+        font-size: 16px;
+        line-height: 38px;
+    }
+    .technology{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    #art .essay{
+        width: 400px;
+    }
+    #text h3{
+        font-size: 40px;
+    }
+    #cproject img{
+        width: 460px;
+    }
+    #cproject .image2{
+        top: 530px;
+    }
+    #cproject .image3{
+        top: 1010px;
+    }
+    #cproject .image4{
+        top: 1490px;
+    }
+    #cproject .image5{
+        top: 1970px;
+    }
+    #cproject .image6{
+        top: 2450px;
+    }
+    #cproject .image2,#cproject .image5{
+        left: 0;
+    }
+    .full-adress{
+        margin-top: 5px;
+        left: 0;
+        top: 800px;
+    }
+    .phone{
+        line-height: 0;
+        background: #f0f0f0;
+        padding: 25px 0;
+        border-radius: 15px;
+    }
+    .contact-padding{
+        margin-bottom: 0;
+    }
+    #div .btn{
+        bottom: 480px;
+    }
+    #messages{
+        height: 125px;
+    }
+}
+@media(max-width: 479px){
+    #contact{
+        width: 300px;
+        height: 1000px;
+    }
+    #service{
+        width: 300px;
+        height: 1400px;
+    }
+    #recent{
+        width: 300px;
+        height: 2050px;
+    }
+    #text {
+        width: 300px;
+    }
+    #about{
+        width: 300px;
+        height: 1070px;
+        padding-top: 120px;
+    }
+    #word a{
+        font-size: 18px;
+    }
+    .name{
+        font-size: 35px;
+    }
+    #about img{
+        width: 300px;
+    }
+    #about h3{
+        top: 565px;
+        left: 0;
+        font-size: 32px;
+        font-weight: 700;
+        padding:20px 0 20px 20px;
+    }
+    #message p{
+        top: 650px;
+        left: 0;
+        font-size: 16px;
+        line-height: 32px;
+    }
+    .technology{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    #art .essay{
+        width: 280px;
+    }
+    #text .btn{
+        top: 180px;
+    }
+    #tproject{
+        margin-left: 0;
+    }
+    #cproject img{
+        width: 300px;
+    }
+    #cproject .image2{
+        top: 370px;
+    }
+    #cproject .image3{
+        top: 690px;
+    }
+    #cproject .image4{
+        top: 1010px;
+    }
+    #cproject .image5{
+        top: 1330px;
+    }
+    #cproject .image6{
+        top: 1650px;
+    }
+    .contact-padding{
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    #div .btn{
+        bottom: 380px;
+    }
+    .controls{
+        width: 260px;
+    }
+}
