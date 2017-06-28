@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box{
+            height: 49px;
+            width: 49px;
+            margin: 400px 800px;
+            position: relative;
+        }
+        #box img{
+            position: absolute;
+        }
+        #box .home{
+           animation: home 1s ease forwards;
+        }
+        #box .close{
+            animation: close 1.5s ease forwards;
+        }
+        #box .full{
+            animation: full 3.5s ease forwards;
+        }
+        #box .open{
+            animation: open 2s ease forwards;
+        }
+        #box .prev{
+            animation: prev 2.5s ease forwards;
+        }
+        #box .refresh{
+            animation: refresh 3s ease forwards;
+        }
+        @keyframes home {
+            from{
+
+            }
+            to{
+                -webkit-transform: rotateZ(-360deg);
+                -moz-transform: rotateZ(-360deg);
+                -ms-transform: rotateZ(-360deg);
+                -o-transform: rotateZ(-360deg);
+                transform: rotateZ(-360deg);
+            }
+        }
+        @keyframes close {
+            from{
+                -webkit-transform: rotateZ(0deg);
+                -moz-transform: rotateZ(0deg);
+                -ms-transform: rotateZ(0deg);
+                -o-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
+                top: 0;
+            }
+            to{
+                -webkit-transform: rotateZ(-360deg);
+                -moz-transform: rotateZ(-360deg);
+                -ms-transform: rotateZ(-360deg);
+                -o-transform: rotateZ(-360deg);
+                transform: rotateZ(-360deg);
+                top: -200px;
+            }
+        }
+        @keyframes full {
+             from{
+                 -webkit-transform: rotateZ(0deg);
+                 -moz-transform: rotateZ(0deg);
+                 -ms-transform: rotateZ(0deg);
+                 -o-transform: rotateZ(0deg);
+                 transform: rotateZ(0deg);
+                 left: 0;
+             }
+             to{
+                 -webkit-transform: rotateZ(-360deg);
+                 -moz-transform: rotateZ(-360deg);
+                 -ms-transform: rotateZ(-360deg);
+                 -o-transform: rotateZ(-360deg);
+                 transform: rotateZ(-360deg);
+                 left: -200px;
+             }
+         }
+        @keyframes open {
+            from{
+                -webkit-transform: rotateZ(0deg);
+                -moz-transform: rotateZ(0deg);
+                -ms-transform: rotateZ(0deg);
+                -o-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
+
+            }
+            to{
+                -webkit-transform: rotateZ(-360deg);
+                -moz-transform: rotateZ(-360deg);
+                -ms-transform: rotateZ(-360deg);
+                -o-transform: rotateZ(-360deg);
+                transform: rotateZ(-360deg);
+
+            }
+        }
+        @keyframes prev {
+            from{
+                -webkit-transform: rotateZ(0deg);
+                -moz-transform: rotateZ(0deg);
+                -ms-transform: rotateZ(0deg);
+                -o-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
+
+            }
+            to{
+                -webkit-transform: rotateZ(-360deg);
+                -moz-transform: rotateZ(-360deg);
+                -ms-transform: rotateZ(-360deg);
+                -o-transform: rotateZ(-360deg);
+                transform: rotateZ(-360deg);
+
+            }
+        }
+        @keyframes refresh {
+            from{
+                -webkit-transform: rotateZ(0deg);
+                -moz-transform: rotateZ(0deg);
+                -ms-transform: rotateZ(0deg);
+                -o-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
+
+            }
+            to{
+                -webkit-transform: rotateZ(-360deg);
+                -moz-transform: rotateZ(-360deg);
+                -ms-transform: rotateZ(-360deg);
+                -o-transform: rotateZ(-360deg);
+                transform: rotateZ(-360deg);
+
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="box">
+        <img id="home" src="img/home.png" alt="" style="z-index: 1"/>
+        <img id="close" src="img/close.png" alt=""/>
+        <img id="full" src="img/full.png" alt=""/>
+        <img id="open" src="img/open.png" alt=""/>
+        <img id="prev" src="img/prev.png" alt=""/>
+        <img id="refresh" src="img/refresh.png" alt=""/>
+    </div>
+    <script>
+        var oBox = document.getElementById('box');
+        var oHome = document.getElementById('home');
+        var aImg = document.getElementsByTagName('img');
+        oBox.onclick = function(){
+            aImg[0].className = "home";
+            aImg[1].className = "close";
+            aImg[2].className = "full";
+            aImg[3].className = "open";
+            aImg[4].className = "prev";
+            aImg[5].className = "refresh";
+        }
+    </script>
+</body>
+</html>
